@@ -17,6 +17,7 @@ const HeaderStyles = styled.header`
   .logo {
     text-decoration: none;
     font-family: var(--logo-font);
+    font-size: xx-large;
   }
 `;
 

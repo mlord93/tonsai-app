@@ -7,9 +7,6 @@ const FooterStyles = styled.div`
   background-color: var(--dusk);
   color: white;
   font-size: medium;
-  p {
-    padding: 10px;
-  }
   .grid {
     display: flex;
     justify-content: space-between;
@@ -23,6 +20,7 @@ const FooterStyles = styled.div`
   }
   .social-media {
     display: flex;
+    padding-top: 10px;
   }
   .fa {
     background-color: var(--red-rock);
@@ -44,6 +42,7 @@ const FooterStyles = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
   }
 `;
 
@@ -52,14 +51,13 @@ export default function Footer() {
     <FooterStyles>
       <div className="grid">
         <div className="side-column">
-          <p>
+          <div>
             Contact Us
             <br />
             <a className="email-us" href="mailto:info@tonsaithreads.com">
               info@tonsaithreads.com
             </a>
-          </p>
-          <h1 className="logo">Tonsai Threads</h1>
+          </div>
         </div>
         <div>
           <div>
@@ -111,15 +109,12 @@ export default function Footer() {
         </div>
         <div className="side-column">
           <div>
-            <p>
+            <div>
               Additional Links go here
               <br />
               Additional Links go here
               <br />
-            </p>
-          </div>
-          <div>
-            <p>Tonsai Threads 2023</p>
+            </div>
           </div>
         </div>
       </div>
