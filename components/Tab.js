@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import propTypes from 'prop-types';
 
 const TabStyles = styled.div`
+  padding-top: 15px;
+
   display: flex;
   flex-direction: column;
   /* margin-top: var(--space-between-components);
@@ -62,7 +64,6 @@ export default function Tab({ tabs }) {
 
   return (
     <TabStyles>
-      <h1>About Us</h1>
       <div className="intro-titles-container">{generateValueTitles()}</div>
       <div className="about-text">{tabs[selectedValue].content}</div>
     </TabStyles>

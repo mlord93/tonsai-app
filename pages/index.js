@@ -51,19 +51,19 @@ const IndexStyles = styled.div`
 
 const values = [
   {
-    label: 'Built for Strength',
+    label: 'Built For Strength',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'Hey ladies, we have a problem. Have you noticed that over time as you climb, you are building the upper body strength that the world told us we would never have. You start getting comments about how great your back looks (even though you can’t see it) so you check it out in the mirror. Indeed, it looks great and feels amazing. That is, until you start to realize that women\’s clothing is not built for buff ladies. Especially those of us with modest chests. Especially sports bras. Bigger back muscles demand a bigger band size but the industry matches that with bigger cup sizes. So we are left buying endless ill fitting sports bras thinking we must be going crazy. If you buy a larger size to make room for your back, the cups are sagging and if you buy a smaller size to keep the cups snug then there is no room for your back muscles and forget breathing! At Tonsai, we are right there with you and we are committed to solving this problem for all of us!',
   },
   {
-    label: 'Woman Owned',
+    label: 'Women Owned',
     content:
-      'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      'We are Chan and Laura, friends who are united by a shared love of climbing and adventure. Like other women climbers, we found ourselves facing the same challenge – the struggle of finding a bra that fits our broad shoulders and lats. We set out on a mission to try on all the bras available in the market and realized there was\'t a bra specifically designed for our climber\'s body. Recognizing the void in the market for a solution, we decided to make it our day job to tackle this problem. Little did we know that our skill sets, one in exercise science and the other in engineering, would converge to create an innovation we never thought we\'d need.',
   },
   {
-    label: 'Strong Values',
+    label: 'Our Values',
     content:
-      'sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      'Welcome to Tonsai, where we believe that every woman deserves to feel confident, comfortable, and cute in her own skin, especially when it comes to what she wears. At Tonsai, we\'re not just a brand; we\'re a movement that celebrates the beauty of strength. Our mission is simple yet powerful: to provide bras that are built with the uniqueness of a climber\'s body in mind. Join us at Tonsai, where every bra is a statement – a statement of confidence, comfort, and undeniable cuteness. Because when you feel good, you\'re unstoppable. 🌺💪 #TonsaiEmpowers #ConfidentComfortCute',
   },
 ];
 
