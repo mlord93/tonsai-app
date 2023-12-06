@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 
 const FooterStyles = styled.div`
-  width: 100%;
-  margin-top: var(--space-between-components);
-  min-height: 100px;
-  background-color: var(--dusk);
-  color: white;
-  font-size: medium;
-  .grid {
+  
+  .tonsai-trees{
+    margin-bottom: -8px;
+    width: 100%;
+  }
+  .footer-wrapper {
     display: flex;
     justify-content: space-between;
-  }
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--dusk);
+    color: white;
+    font-size: medium;
+    }
   .logo {
-    line-height: 1.5;
     font-family: var(--logo-font);
+    margin-top: 0;
+
   }
   .email-us {
     text-decoration: underline;
@@ -34,6 +39,7 @@ const FooterStyles = styled.div`
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    font-family: fontAwesome;
   }
   .fa:hover {
     background-color: var(--light-dusk);
@@ -49,7 +55,12 @@ const FooterStyles = styled.div`
 export default function Footer() {
   return (
     <FooterStyles>
-      <div className="grid">
+      <img
+        className="tonsai-trees"
+        src="/static/Tonsai_tree.png"
+        alt="Trees above footer"
+      />
+      <div className="footer-wrapper">
         <div className="side-column">
           <div>
             Contact Us
@@ -108,14 +119,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="side-column">
-          <div>
-            <div>
-              Additional Links go here
-              <br />
-              Additional Links go here
-              <br />
-            </div>
-          </div>
+          <h2 className="logo">Tonsai Wear</h2>
         </div>
       </div>
     </FooterStyles>

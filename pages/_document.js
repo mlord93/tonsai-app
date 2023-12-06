@@ -2,7 +2,7 @@ import Document, { Html, Head, NextScript, Main } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class myDocument extends Document {
-  static async getInitialProps( ctx ) {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
 
@@ -36,10 +36,8 @@ export default class myDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Crimson+Pro"
           />
-          <script
-            src="https://kit.fontawesome.com/ff7c082047.js"
-            crossOrigin="anonymous"
-          /></Head>
+          <script src="http://kit.fontawesome.com/ff7c082047.js" crossOrigin="anonymous"></script>
+        </Head>
         <body>
           <Main />
           <NextScript />

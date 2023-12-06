@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   font-size: 1.5;
   z-index: 2;
-  background: var(--red-rock);
+  background: var(--dark-dusk);
   position: fixed;
   width: 100%;
   .bar {
@@ -26,7 +26,7 @@ export default function Header() {
     <HeaderStyles>
       <div className="bar">
         <div className="logo">
-          <Link href="/">Tonsai</Link>
+          <Link href="/">Tonsai Wear</Link>
         </div>
       </div>
     </HeaderStyles>

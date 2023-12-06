@@ -7,14 +7,6 @@ const TabStyles = styled.div`
 
   display: flex;
   flex-direction: column;
-  /* margin-top: var(--space-between-components);
-  background-color: var(--dusk);
-  width: 90vw;
-  min-height: 300px;
-  margin-left: 5vw;
-  border-radius: var(--border-radius);
-  color: white;
-  box-shadow: var(--bs); */
 
   h1 {
     align-self: center;

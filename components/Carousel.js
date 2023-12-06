@@ -17,7 +17,7 @@ const CarouselStyles = styled.div`
   .title-wrapper {
     align-self: center;
     padding-bottom: 20px;
-    font-family: var(--logo-font);
+    font-size: x-large;
   }
   button {
     background: none;
@@ -53,6 +53,13 @@ export default function Carousel({ title, children }) {
 
   return (
     <CarouselStyles>
+      <div className="carousel-inner" ref={containerRef}>
+        {children.map((item, index) => (
+          <div className="carousel-item" key={index}>
+            {item}
+          </div>
+        ))}
+      </div>
       <div className="title-wrapper">
         <button onClick={() => handleScroll(-1)}>
           <i className="fa-solid fa-arrow-left" />
@@ -61,13 +68,6 @@ export default function Carousel({ title, children }) {
         <button onClick={() => handleScroll(1)}>
           <i className="fa-solid fa-arrow-right" />
         </button>
-      </div>
-      <div className="carousel-inner" ref={containerRef}>
-        {children.map((item, index) => (
-          <div className="carousel-item" key={index}>
-            {item}
-          </div>
-        ))}
       </div>
     </CarouselStyles>
   );
