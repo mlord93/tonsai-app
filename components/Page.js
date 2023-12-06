@@ -19,7 +19,7 @@ const GlobalStyles = createGlobalStyle`
         --bs: 0 1px 5px 0 gray;
         --header-height: 50px;
         --border-radius: 10px;
-        --space-between-components: 100px;
+        --space-between-components: 200px;
         --logo-font: 'DM Serif Display', serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     *, *::before, *.after {
@@ -35,7 +35,7 @@ const GlobalStyles = createGlobalStyle`
         height: 100vh;
         padding: 0;
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         line-height: 1.5;
     }
     a {

@@ -6,6 +6,10 @@ const CarouselStyles = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
+  .carousel-container{
+    position: relative;
+    overflow: hidden;
+  }
 
   .carousel-inner {
     width: 100vw;
@@ -19,15 +23,40 @@ const CarouselStyles = styled.div`
     padding-bottom: 20px;
     font-size: x-large;
   }
+
+  .button-container {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+  }
   button {
-    background: none;
-    color: inherit;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--light-dusk);
+    color: white;
     border: none;
-    padding: 5px 50px 5px 50px;
+    border-radius: 50%;
+    height: 50px;
+    width: 40px;
     font: inherit;
     cursor: pointer;
     outline: inherit;
     font-weight: bold;
+  }
+  button:hover{
+    background-color: var(--red-rock);
+  }
+  .button-left {
+    left: 5%;
+  }
+  .button-right{
+    right: 5%;
+  }
+  .icon-font{
+    font-size: 35px;
   }
 `;
 
@@ -53,21 +82,25 @@ export default function Carousel({ title, children }) {
 
   return (
     <CarouselStyles>
-      <div className="carousel-inner" ref={containerRef}>
-        {children.map((item, index) => (
-          <div className="carousel-item" key={index}>
-            {item}
-          </div>
-        ))}
-      </div>
       <div className="title-wrapper">
-        <button onClick={() => handleScroll(-1)}>
-          <i className="fa-solid fa-arrow-left" />
-        </button>
         {title}
-        <button onClick={() => handleScroll(1)}>
-          <i className="fa-solid fa-arrow-right" />
-        </button>
+      </div>
+      <div className="carousel-container">
+        <div className="carousel-inner" ref={containerRef}>
+          {children.map((item, index) => (
+            <div className="carousel-item" key={index}>
+              {item}
+            </div>
+          ))}
+        </div>
+        <div className="button-container">
+          <button className="button-left" onClick={() => handleScroll(-1)}>
+            <i className="icon-font fa-solid fa-angle-left" />
+          </button>
+          <button className="button-right" onClick={() => handleScroll(1)}>
+            <i className="icon-font fa-solid fa-angle-right" />
+          </button>
+        </div>
       </div>
     </CarouselStyles>
   );

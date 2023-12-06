@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import Carousel from '../components/Carousel';
-import Box from '../components/Box';
 import Image from 'next/image';
 import blogItems from '/content/blogItems';
 import aboutUs from '/content/aboutUs';
@@ -28,10 +27,16 @@ const IndexStyles = styled.div`
   }
   .blog-post {
     width: 30vh;
-    margin-left: 5vw;
+    margin-left: 1vw;
+    position: relative;
   }
   .blog-text {
     line-height: 1;
+    position: absolute;
+    text-align: center;
+    top: 5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
   }
   .blog-image {
     width: 100%;
@@ -58,7 +63,7 @@ const IndexStyles = styled.div`
   .about-us-background-dark {
     background-color: var(--dark-dusk);
     color: white;
-    padding: 40px 0px 40px 0px;
+    padding: 150px 0px 150px 0px;
   }
   .about-us-text {
     width: 60%;
@@ -73,7 +78,7 @@ export default function IndexPage() {
       <div className="hero-container">
         {<img
           className="hero-image"
-          src="/static/RedRockClimbing.png"
+          src="/static/climber.jpg"
           alt="Climbing at Red Rocks"
         />}
         <div className="tag-line">Built for<br />Climbers</div>
@@ -88,11 +93,10 @@ export default function IndexPage() {
         }
         <Carousel title="Tonsai Blog">
           {blogItems.map((post, i) => (
-            <Box width={15} key={i}>
+            <div className="blog-post" key={i}>
               <h3 className="blog-text">{post.title}</h3>
-              <p className="blog-text">{post.standfirst}</p>
-              <Image width="300" height="300" quality={100} className="blog-image" alt={post.altText} src={post.image} />
-            </Box>
+              <Image width="500" height="500" quality={100} className="blog-image" alt={post.altText} src={post.image} />
+            </div>
           ))}
         </Carousel>
       </div >
