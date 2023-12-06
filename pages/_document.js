@@ -36,7 +36,7 @@ export default class myDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Crimson+Pro"
           />
-          <script src="http://kit.fontawesome.com/ff7c082047.js" crossOrigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/ff7c082047.js" crossOrigin="anonymous"></script>
         </Head>
         <body>
           <Main />

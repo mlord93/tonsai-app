@@ -5,7 +5,8 @@ import Footer from './Footer';
 
 const GlobalStyles = createGlobalStyle`
     html {
-        --light-sand: #FFF1E0;
+        //--light-sand: #FFF1E0;
+        --light-sand: white;
         --sand: #f2ac6b;
         --red-rock: #e98249;
         --gray: #9c8c71;
@@ -14,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
         --dusk: #125060;
         --dark-dusk: #0A313B;
         --deep-cyan: #216567;
-        --maxWidth:1000px;
+        --maxWidth: 1000px;
         --bs: 0 1px 5px 0 gray;
         --header-height: 50px;
         --border-radius: 10px;
