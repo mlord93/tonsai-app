@@ -17,9 +17,7 @@ const FooterStyles = styled.div`
     font-size: medium;
     }
   .logo {
-    font-family: var(--logo-font);
-    margin-top: 0;
-
+    margin-top: 10px;
   }
   .email-us {
     text-decoration: underline;
@@ -66,8 +64,8 @@ export default function Footer() {
           <div>
             Contact Us
             <br />
-            <a className="email-us" href="mailto:info@tonsaithreads.com">
-              info@tonsaithreads.com
+            <a className="email-us" href="mailto:tonsaiwear@gmail.com">
+              tonsaiwear@gmail.com
             </a>
           </div>
         </div>
@@ -82,7 +80,7 @@ export default function Footer() {
                 {' '}
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/tonsaiwear/"
                 aria-label="Follow on Instagram"
                 className="fa fa-instagram"
               >
@@ -110,7 +108,7 @@ export default function Footer() {
                 {' '}
               </a>
               <a
-                href="mailto:info@tonsaithreads.com"
+                href="mailto:tonsaiwear@gmail.com"
                 aria-label="Email Us"
                 className="fa fa-regular fa-envelope"
               >
@@ -120,7 +118,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="side-column">
-          <h2 className="logo">Tonsai Wear</h2>
+          <div className="logo">© 2023 Tonsai</div>
         </div>
       </div>
     </FooterStyles>

@@ -15,11 +15,31 @@ const IndexStyles = styled.div`
     object-fit: cover;
     margin-top: var(--header-height);
   }
+  .logo {
+    position: absolute;
+    top: 3%; 
+    left: 50%;
+    width: 8vw;
+    aspect-ratio: 1/1;
+    transform: translate(-50%, -50%);
+  }
+  .coming-soon {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white;
+    font-size: 8rem;
+    font-weight: bold;
+    font-family: var(--coming-soon-font);
+    font-style:italic;
+  }
   .tag-line {
     position: absolute;
-    top: 75%; /* Center vertically */
-    left: 75%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    top: 75%; 
+    left: 75%;
+    transform: translate(-50%, -50%); 
     text-align: center;
     color: white;
     font-size: 4rem;
@@ -31,6 +51,7 @@ const IndexStyles = styled.div`
     position: relative;
   }
   .blog-text {
+    color: white;
     line-height: 1;
     position: absolute;
     text-align: center;
@@ -51,7 +72,13 @@ const IndexStyles = styled.div`
     flex-direction: column;
     gap: var(--space-between-components);
   }
-  .about-us {
+  .about-us-wrapper {
+    width: 100vw;
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+  }
+  .about-us-middle {
     width: 100vw;
     display:flex;
     align-items: center;
@@ -60,38 +87,76 @@ const IndexStyles = styled.div`
   .about-us-title{
     font-style: italic;
   }
-  .about-us-background-dark {
+  .background-dark {
+    width: 100vw;
     background-color: var(--dark-dusk);
     color: white;
     padding: 150px 0px 150px 0px;
   }
   .about-us-text {
-    width: 60%;
+    width: 80%;
     text-align:center;
     padding: 20px 0px 40px 0px;
   }
+
+  .side-image{
+    width: 20vw;
+    padding: 0px 40px 0px 40px;
+    object-fit: cover; /* Maintains the aspect ratio and covers the entire container */
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+  .side-image-caption{
+    text-align:center;
+  }
+
 `;
 
 export default function IndexPage() {
+
+  function renderSideImage(image, caption) {
+    if (image) {
+      return (
+        <div>
+          <img className="side-image" src={image} alt={caption}></img>
+          <div className="side-image-caption">{caption}</div>
+        </div>)
+    }
+  }
+
   return (
     <IndexStyles aboutUsHeight={0}>
       <div className="hero-container">
-        {<img
+        <img
           className="hero-image"
           src="/static/climber.jpg"
           alt="Climbing at Red Rocks"
-        />}
-        <div className="tag-line">Built for<br />Climbers</div>
+        />
+        {/*<div className="tag-line">Built for<br />Climbers</div>*/}
+        <img
+          className="logo"
+          src="/static/Logo_white.png"
+          alt="Logo Image"
+        />
+        <div className="coming-soon">Launching Soon</div>
       </div>
+
+
       <div className="page-spacing">
+
         {aboutUs.map((section, i) => (
-          <div key={i} className={i % 2 == 0 ? "about-us about-us-background-dark" : "about-us"}>
-            <h1 className="about-us-title" > {section.label}</h1>
-            <div className="about-us-text">{section.content}</div>
+          <div key={i} className={i % 2 == 0 ? "background-dark about-us-wrapper" : "about-us-wrapper"}>
+            {renderSideImage(section.imageLeft, section.captionLeft)}
+            <div className="about-us-middle">
+              <h1 className="about-us-title" > {section.label}</h1>
+              <div className="about-us-text">{section.content}</div>
+            </div>
+            {renderSideImage(section.imageRight, section.captionRight)}
           </div>
         ))
         }
-        <Carousel title="Tonsai Blog">
+
+        <Carousel title="#ConfidentComfortCute">
           {blogItems.map((post, i) => (
             <div className="blog-post" key={i}>
               <h3 className="blog-text">{post.title}</h3>

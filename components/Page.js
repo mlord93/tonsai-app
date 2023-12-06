@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types';
 import styled, { createGlobalStyle } from 'styled-components';
-import Header from './Header';
 import Footer from './Footer';
 
 const GlobalStyles = createGlobalStyle`
@@ -17,11 +16,12 @@ const GlobalStyles = createGlobalStyle`
         --deep-cyan: #216567;
         --maxWidth: 1000px;
         --bs: 0 1px 5px 0 gray;
-        --header-height: 50px;
+        --header-height: 0px;
         --border-radius: 10px;
         --space-between-components: 200px;
         --logo-font: 'DM Serif Display', serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
+        --coming-soon-font: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
     *, *::before, *.after {
         box-sizing: inherit;
     }
@@ -57,7 +57,6 @@ export default function Page({ children }) {
   return (
     <div>
       <GlobalStyles />
-      <Header />
       <InnerStyles>{children}</InnerStyles>
       <Footer />
     </div>

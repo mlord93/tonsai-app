@@ -21,7 +21,8 @@ const CarouselStyles = styled.div`
   .title-wrapper {
     align-self: center;
     padding-bottom: 20px;
-    font-size: x-large;
+    font-size: xx-large;
+    font-weight:bold;
   }
 
   .button-container {

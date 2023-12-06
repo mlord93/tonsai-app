@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const HeaderStyles = styled.header`
   font-size: 1.5;
   z-index: 2;
-  background: var(--dark-dusk);
+  background: var(--red-rock);
   position: fixed;
   width: 100%;
   .bar {
