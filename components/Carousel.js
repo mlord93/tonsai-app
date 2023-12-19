@@ -56,6 +56,11 @@ const CarouselStyles = styled.div`
   .button-right{
     right: 5%;
   }
+  @media (max-width: 768px) {
+      button {
+        visibility: hidden;
+      }
+    }
   .icon-font{
     font-size: 35px;
   }

@@ -47,6 +47,7 @@ const IndexStyles = styled.div`
   }
   .blog-post {
     width: 30vh;
+    min-width: 200px;
     margin-left: 1vw;
     position: relative;
   }
@@ -106,6 +107,15 @@ const IndexStyles = styled.div`
     border-radius: 50%;
     aspect-ratio: 1/1;
   }
+
+  .side-image-left{
+    margin-right: -50px;
+  }
+
+  .side-image-right{
+    margin-left: -50px;
+  }
+
   .side-image-caption{
     text-align:center;
   }
@@ -114,25 +124,24 @@ const IndexStyles = styled.div`
 
 export default function IndexPage() {
 
-  function renderSideImage(image, caption) {
+  function renderSideImage(image, caption, side) {
     if (image) {
       return (
         <div>
-          <img className="side-image" src={image} alt={caption}></img>
+          <img className={"side-image side-image-" + side} src={image} alt={caption}></img>
           <div className="side-image-caption">{caption}</div>
         </div>)
     }
   }
 
   return (
-    <IndexStyles aboutUsHeight={0}>
+    <IndexStyles>
       <div className="hero-container">
         <img
           className="hero-image"
           src="/static/climber.jpg"
           alt="Climbing at Red Rocks"
         />
-        {/*<div className="tag-line">Built for<br />Climbers</div>*/}
         <img
           className="logo"
           src="/static/Logo_white.png"
@@ -141,17 +150,16 @@ export default function IndexPage() {
         <div className="coming-soon">Launching Soon</div>
       </div>
 
-
       <div className="page-spacing">
 
         {aboutUs.map((section, i) => (
           <div key={i} className={i % 2 == 0 ? "background-dark about-us-wrapper" : "about-us-wrapper"}>
-            {renderSideImage(section.imageLeft, section.captionLeft)}
+            {renderSideImage(section.imageLeft, section.captionLeft, "left")}
             <div className="about-us-middle">
               <h1 className="about-us-title" > {section.label}</h1>
               <div className="about-us-text">{section.content}</div>
             </div>
-            {renderSideImage(section.imageRight, section.captionRight)}
+            {renderSideImage(section.imageRight, section.captionRight, "right")}
           </div>
         ))
         }

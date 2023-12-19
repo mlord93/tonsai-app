@@ -87,27 +87,6 @@ export default function Footer() {
                 {' '}
               </a>
               <a
-                href="https://youtube.com"
-                aria-label="Follow on Youtube"
-                className="fa fa-youtube"
-              >
-                {' '}
-              </a>
-              <a
-                href="https://tiktok.com"
-                aria-label="Follow on Tiktok"
-                className="fa fa-brands fa-tiktok"
-              >
-                {' '}
-              </a>
-              <a
-                href="https://twitter.com"
-                aria-label="Follow on Twitter"
-                className="fa fa-brands fa-x-twitter"
-              >
-                {' '}
-              </a>
-              <a
                 href="mailto:tonsaiwear@gmail.com"
                 aria-label="Email Us"
                 className="fa fa-regular fa-envelope"

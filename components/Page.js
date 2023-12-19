@@ -30,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
         background-color: var(--light-sand);
         background-image: url("/static/Tonsai_mtn.png");
         background-attachment: fixed;
+        background-position: bottom center; 
         background-size: cover;
         position: relative;
         height: 100vh;
@@ -45,6 +46,7 @@ const GlobalStyles = createGlobalStyle`
     a.hover {
         text-decoration: underline;
     }
+    
 `;
 
 const InnerStyles = styled.div`
