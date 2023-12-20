@@ -18,7 +18,7 @@ const GlobalStyles = createGlobalStyle`
         --bs: 0 1px 5px 0 gray;
         --header-height: 0px;
         --border-radius: 10px;
-        --space-between-components: 200px;
+        --space-between-components: 150px;
         --logo-font: 'DM Serif Display', serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         --coming-soon-font: 'Bebas Neue', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
       }

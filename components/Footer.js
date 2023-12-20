@@ -49,6 +49,13 @@ const FooterStyles = styled.div`
     justify-content: space-between;
     padding: 10px;
   }
+  @media (max-width: 500px) {
+    .footer-wrapper {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      }
+    }
 `;
 
 export default function Footer() {

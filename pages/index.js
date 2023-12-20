@@ -69,24 +69,10 @@ const IndexStyles = styled.div`
   }
   .page-spacing {
     margin-top: -15px;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     gap: var(--space-between-components);
-  }
-  .about-us-wrapper {
-    width: 100vw;
-    display:flex;
-    align-items: center;
-    flex-direction: row;
-  }
-  .about-us-middle {
-    width: 100vw;
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-  }
-  .about-us-title{
-    font-style: italic;
   }
   .background-dark {
     width: 100vw;
@@ -94,30 +80,88 @@ const IndexStyles = styled.div`
     color: white;
     padding: 150px 0px 150px 0px;
   }
-  .about-us-text {
-    width: 80%;
-    text-align:center;
-    padding: 20px 0px 40px 0px;
+
+  .about-us-wrapper {
+    width: 100vw;
+    display: grid;
+    justify-content: start;
+    grid-template-areas: "image-left text image-right";
   }
 
-  .side-image{
+  .about-us-middle {
+    justify-self: center;
+    grid-area: text;
+    width: 80%;
+  }
+
+  .side-image {
     width: 20vw;
     padding: 0px 40px 0px 40px;
-    object-fit: cover; /* Maintains the aspect ratio and covers the entire container */
+    object-fit: cover;
     border-radius: 50%;
     aspect-ratio: 1/1;
   }
 
   .side-image-left{
-    margin-right: -50px;
+    width: 25vw;
+    align-self: center;
+    grid-area: image-left;
   }
 
   .side-image-right{
-    margin-left: -50px;
+    width: 25vw;
+    align-self:center;
+    grid-area: image-right;
   }
 
   .side-image-caption{
+    text-align: center;
+  }
+
+  .about-us-title{
+    font-style: italic;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+  }
+
+  .about-us-text {
     text-align:center;
+    padding: 20px 0px 40px 0px;
+  }
+
+  @media ( max-width: 500px ) {
+    .coming-soon {
+      font-size: 5rem;
+    }
+
+    .about-us-wrapper {
+      justify-items: center;
+      row-gap: 20px;
+      grid-template-areas: 
+      "image-left"
+      "image-right"
+      "text";
+    }
+
+    .side-image-left {
+        grid-row: 1; /* Top position */
+        width: auto;
+    }
+
+    .side-image-right {
+        grid-row: 2; /* Middle position */
+        width: auto;
+    }
+
+    .about-us-text {
+        width: 100%;
+        grid-row: 3; /* Bottom position */
+    }
+
+    .side-image {
+      padding: 0px;
+      width: 50vw;
+    }
   }
 
 `;
@@ -127,8 +171,8 @@ export default function IndexPage() {
   function renderSideImage(image, caption, side) {
     if (image) {
       return (
-        <div>
-          <img className={"side-image side-image-" + side} src={image} alt={caption}></img>
+        <div className={"side-image-" + side}>
+          <img className="side-image" src={image} alt={caption}></img>
           <div className="side-image-caption">{caption}</div>
         </div>)
     }
@@ -153,13 +197,16 @@ export default function IndexPage() {
       <div className="page-spacing">
 
         {aboutUs.map((section, i) => (
-          <div key={i} className={i % 2 == 0 ? "background-dark about-us-wrapper" : "about-us-wrapper"}>
-            {renderSideImage(section.imageLeft, section.captionLeft, "left")}
-            <div className="about-us-middle">
-              <h1 className="about-us-title" > {section.label}</h1>
-              <div className="about-us-text">{section.content}</div>
+          <div key={i} className={i % 2 == 0 ? "background-dark" : ""}>
+
+            <h1 className="about-us-title" > {section.label}</h1>
+            <div className="about-us-wrapper">
+              {renderSideImage(section.imageLeft, section.captionLeft, "left")}
+              <div className="about-us-middle">
+                <div className="about-us-text">{section.content}</div>
+              </div>
+              {renderSideImage(section.imageRight, section.captionRight, "right")}
             </div>
-            {renderSideImage(section.imageRight, section.captionRight, "right")}
           </div>
         ))
         }
