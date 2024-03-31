@@ -1,5 +1,5 @@
 # tonsai-app
-Currently deployed to tonsaiwear.com
+Currently deployed to [www.tonsaiwear.com](https://www.tonsaiwear.com/)
 
 This webapp is built to support the women's sportwear company, Tonsai Wear. 
 
